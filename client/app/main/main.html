@@ -1,0 +1,47 @@
+<!-- <header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>'Allo, 'Allo!</h1>
+    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
+    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+  </div>
+</header>
+ -->
+<div class="container">
+<div class="row stream-container">
+  <div class="col-sm-5">
+    <div class="col-sm-6" class="item-fb">
+      <img src="/assets/images/{{$ctrl.img1}}" width="100%" class="item-photo">
+      <div class="reaction-container"><img src="/assets/images/like.png" width="40px" class="fb-reaction">{{$ctrl.count1}}</div>
+    </div>
+    <div class="col-sm-6" class="item-fb">
+      <img src="/assets/images/{{$ctrl.img2}}" width="100%" class="item-photo">
+      <div class="reaction-container"><img src="/assets/images/love.png" width="40px" class="fb-reaction">{{$ctrl.count2}}</div>
+    </div>
+    <div class="col-sm-6" class="item-fb">
+      <img src="/assets/images/{{$ctrl.img3}}" width="100%" class="item-photo">
+      <div class="reaction-container"><img src="/assets/images/haha.png" width="40px" class="fb-reaction">{{$ctrl.count3}}</div>
+    </div>
+    <div class="col-sm-6" class="item-fb">
+      <img src="/assets/images/{{$ctrl.img4}}" width="100%" class="item-photo">
+      <div class="reaction-container"><img src="/assets/images/wow.png" width="40px" class="fb-reaction">{{$ctrl.count4}}</div>
+    </div>
+  </div>
+  <div class="col-sm-7">
+    <h5>Settings</h5>
+  </div>
+</div>
+<div id="fb-root"></div>
+<button id="liveButton" ng-click="$ctrl.createLive(); $ctrl.$event.stopPropagation();">Create Live Stream To Facebook</button>
+  <div class="row">
+  <h4>ffmpeg -f x11grab -framerate 10 -video_size 1280x720 \
+-i :0.0+0,0 -vcodec libx264 -preset veryfast -maxrate 1984k -bufsize 3968k \
+-vf "format=yuv420p" -g 60 -c:a aac -b:a 128k -ar 44100 \
+-f flv "rtmp://rtmp-api.facebook.com:80/rtmp/710396119128522?ds=1&s_l=1&a=AaZYkneYzQCAVC4k"</h4>
+    <div class="col-lg-12">
+      <h1 class="page-header">Features:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in $ctrl.awesomeThings">
+        <li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
