@@ -9,26 +9,44 @@
 <div class="container">
 <div class="row stream-container">
   <div class="col-sm-5">
-    <div class="col-sm-6" class="item-fb">
-      <img src="/assets/images/{{$ctrl.img1}}" width="100%" class="item-photo">
+    <div class="col-sm-6" class="item-fb" ng-repeat="obj in $ctrl.obj1 | filter:{'display': true}">
+    <div ng-show="obj.display" class="obj-item">
+      <img src="/assets/images/{{obj.img}}" width="100%" class="item-photo">
       <div class="reaction-container"><img src="/assets/images/like.png" width="40px" class="fb-reaction">{{$ctrl.count1}}</div>
+      <div ng-class="obj.class">{{obj.comment}}</div>
     </div>
-    <div class="col-sm-6" class="item-fb">
-      <img src="/assets/images/{{$ctrl.img2}}" width="100%" class="item-photo">
+    </div>
+    <div class="col-sm-6" class="item-fb" ng-repeat="obj in $ctrl.obj2 | filter:{'display': true}">
+    <div ng-show="obj.display" class="obj-item">
+      <img src="/assets/images/{{obj.img}}" width="100%" class="item-photo">
       <div class="reaction-container"><img src="/assets/images/love.png" width="40px" class="fb-reaction">{{$ctrl.count2}}</div>
+      <div ng-class="obj.class">{{obj.comment}}</div>
     </div>
-    <div class="col-sm-6" class="item-fb">
-      <img src="/assets/images/{{$ctrl.img3}}" width="100%" class="item-photo">
+    </div>
+    <div class="col-sm-6" class="item-fb" ng-repeat="obj in $ctrl.obj3 | filter:{'display': true}">
+    <div ng-show="obj.display" class="obj-item">
+      <img src="/assets/images/{{obj.img}}" width="100%" class="item-photo">
       <div class="reaction-container"><img src="/assets/images/haha.png" width="40px" class="fb-reaction">{{$ctrl.count3}}</div>
+      <div ng-class="obj.class">{{obj.comment}}</div>
     </div>
-    <div class="col-sm-6" class="item-fb">
-      <img src="/assets/images/{{$ctrl.img4}}" width="100%" class="item-photo">
+    </div>
+    <div class="col-sm-6" class="item-fb" ng-repeat="obj in $ctrl.obj4 | filter:{'display': true}">
+    <div ng-show="obj.display" class="obj-item">
+      <img src="/assets/images/{{obj.img}}" width="100%" class="item-photo">
       <div class="reaction-container"><img src="/assets/images/wow.png" width="40px" class="fb-reaction">{{$ctrl.count4}}</div>
+      <div ng-class="obj.class">{{obj.comment}}</div>
+    </div>
     </div>
   </div>
   <div class="col-sm-7">
     <h5>Settings</h5>
   </div>
+    <div class="col-sm-12 bubbles">
+      <img src="/assets/images/like.png" width="40px" ng-class="$ctrl.class1">
+      <img src="/assets/images/love.png" width="40px" ng-class="$ctrl.class2">
+      <img src="/assets/images/haha.png" width="40px" ng-class="$ctrl.class3">
+      <img src="/assets/images/wow.png" width="40px" ng-class="$ctrl.class4">
+    </div>
 </div>
 <div id="fb-root"></div>
 <button id="liveButton" ng-click="$ctrl.createLive(); $ctrl.$event.stopPropagation();">Create Live Stream To Facebook</button>

@@ -29,18 +29,41 @@
 .stream-container {
   height: 600px;
 
+  // .obj-item {
+  //   height: 200px;
+  //   width: 200px;
+  //   overflow: hidden;
+  // }
   .item-fb {
     height: 200px;
     width: 200px;
   }
   .reaction-container {
     position: relative;
-    top: -44px;
+    top: -46px;
     left: 4px;
     font-size: 30px;
     color: #F5F5F5;
     img {
       margin-right: 20px;
     }
+  }
+  .fb-comments.start {
+    display: none;
+  }
+  .fb-comments {
+    position: absolute;
+    bottom: -0em;
+    left: 16px;
+    font-size: 16px;
+    color: #f00;
+    width: 100%;
+    height: 3em;
+    white-space: nowrap;
+  }
+  .bubbles {
+    position: fixed;
+    top: 340px;
+    left:440px;
   }
 }
