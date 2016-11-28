@@ -100,10 +100,10 @@ export class MainController {
       class: "fb-comments start"
     };
 
-    this.count1 = 0;
-    this.count2 = 0;
-    this.count3 = 0;
-    this.count4 = 0;
+    this.count1 = 168;
+    this.count2 = 61;
+    this.count3 = 14;
+    this.count4 = 10;
     this.idx1 = 0;
     this.idx2 = 0;
     this.idx3 = 0;
@@ -171,7 +171,7 @@ export class MainController {
         this.count3 = this.count3 + 1;
       else
         this.count4 = this.count4 + 1;
-    }).bind(this),5000);
+    }).bind(this),20000);
 
     $interval((function(){
       let r = Math.random();
